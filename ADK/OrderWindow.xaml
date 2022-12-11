@@ -1,0 +1,39 @@
+﻿<Window x:Class="GSS.OrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Создание заказа" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="CreateOrderButton" Content="Сформировать заказ" Margin="10" Height="30"
+                    Click="CreateOrderButton_Click" />
+            <Button x:Name="SaveOrderButton" Content="Сохранить заказ" Margin="10" Height="30" Click="SaveOrderButton_Click" />
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <ListView x:Name="OrderGrid">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Наименование" Width="500" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Количество" Width="100" DisplayMemberBinding="{Binding Amount}" />
+                    </GridView>
+                </ListView.View>
+
+                <ListView.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.HeaderTemplate>
+                            <DataTemplate>
+                                <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+                            </DataTemplate>
+                        </GroupStyle.HeaderTemplate>
+                    </GroupStyle>
+                </ListView.GroupStyle>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
