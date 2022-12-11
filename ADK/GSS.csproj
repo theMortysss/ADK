@@ -257,9 +257,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLibrary\DataAccessLibrary.csproj">
+    <ProjectReference Include="..\DAL\DataAccessLibrary.csproj">
       <Project>{1af4d06b-d2dd-4e3a-b50a-fb8941d4650f}</Project>
-      <Name>DataAccessLibrary</Name>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
