@@ -1,0 +1,24 @@
+﻿<Window x:Class="GSS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="GSS" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="GoodsListButton" Content="Открыть склад" Width="100" Height="50"
+                    Click="GoodsListButton_Click"
+                    Margin="10" />
+            <Button x:Name="OrderButton" Content="Создать заказ" Width="100" Height="50" Click="OrderButton_Click"
+                    Margin="10" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="SupplyButton" Content="Поставки" Width="100" Height="50"
+                    Click="SupplyButton_OnClick"
+                    Margin="10" />
+            <Button x:Name="SaleButton" Content="Продажи" Width="100" Height="50" Click="SaleButton_OnClick"
+                    Margin="10" />
+        </StackPanel>
+    </StackPanel>
+</Window>
